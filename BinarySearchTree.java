@@ -18,6 +18,12 @@ public class BinarySearchTree {
 		myTree.add(63);
 		myTree.add(67);
 		myTree.print(myTree.root);
+		boolean flag = myTree.search(63);
+		if (flag == true)
+			System.out.println("\nElement is present");
+		else
+			System.out.println("\nElement is not present");
+
 	}
 
 }

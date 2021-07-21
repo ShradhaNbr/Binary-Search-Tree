@@ -51,4 +51,25 @@ public class myBinaryTree<K extends Comparable<K>> {
 		}
 	}
 
+	public myBinaryNode<K> searchNode(myBinaryNode<K> root, int key) {
+		// root is null or key is present at root
+		if (root == null || root.key == key)
+			return root;
+		// value is greater than key
+		if (root.key > key)
+			return searchNode(root.left, key);
+		// value is less than key
+		return searchNode(root.right, key);
+
+	}
+
+	public boolean search(int value) {
+		root = searchNode(root, value);
+		if (root != null)
+			return true;
+		else
+			return false;
+
+	}
+
 }
